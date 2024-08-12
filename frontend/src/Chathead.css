@@ -1,0 +1,9 @@
+.chathead-container {
+    display: flex;
+    align-items: center;
+}
+
+img {
+  width: 75px;
+  height: 95px;
+}

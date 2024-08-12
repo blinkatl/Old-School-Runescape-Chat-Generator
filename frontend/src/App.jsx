@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Chathead from './Chathead'
+import Textbox from './Textbox';
 
 //npm run dev
 
@@ -18,7 +20,15 @@ function App() {
     <>
       <div className="App">
         <div className="main-container">
-          
+          <div className="top-container">
+            <div className="chatbox-container">
+              <Chathead />
+              <Textbox />
+            </div>
+          </div>
+          <div className="bottom-container">
+
+          </div>
         </div>
       </div>
     </>
@@ -26,4 +36,3 @@ function App() {
 }
 
 export default App
-
