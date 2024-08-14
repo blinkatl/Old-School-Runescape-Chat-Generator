@@ -1,4 +1,7 @@
 .textbox-container {
+    font-family: 'Quill8', sans-serif;
+    font-size: 18px;
+    color: black;
     display: flex;
     align-items: center;
 }

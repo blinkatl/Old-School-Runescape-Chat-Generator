@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Chathead from './Chathead'
 import Textbox from './Textbox';
+import SearchBar from './Searchbar';
 
 //npm run dev
 
@@ -27,7 +28,7 @@ function App() {
             </div>
           </div>
           <div className="bottom-container">
-
+            <SearchBar />
           </div>
         </div>
       </div>
