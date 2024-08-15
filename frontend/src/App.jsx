@@ -10,6 +10,7 @@ import TextInput from './TextInput';
 function App() {
   const [message, setMessage] = useState('');
   const [dialogue, setDialogue] = useState('');
+  const [chathead, setChathead] = useState('Gnome_child');
 
   useEffect(() => {
     // Fetch data from the backend
@@ -29,12 +30,12 @@ function App() {
         <div className="main-container">
           <div className="top-container">
             <div className="chatbox-container">
-              <Chathead />
+              <Chathead chathead={chathead}/>
               <Textbox dialogue={dialogue}/>
             </div>
           </div>
           <div className="bottom-container">
-            <SearchBar />
+            <SearchBar setChathead={setChathead}/>
             <TextInput dialogue={dialogue} handleInputChange={handleInputChange}/>
           </div>
         </div>

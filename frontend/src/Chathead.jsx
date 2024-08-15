@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Chathead.css'
 
-function Chathead() {
-    // const [chathead, setChathead] = useState();
-
+function Chathead({ chathead }) {
     // useEffect(() => {
     //     fetch('http://localhost:3000/chathead/Arvel.png')
     //         .then(res => res.json())
@@ -13,10 +11,11 @@ function Chathead() {
     //         })
     //         .catch(error => console.error('Error fetching chathead:', error));
     // }, []);
-
+    const modifiedChathead = chathead.replace(/ /g, '_');
+    console.log(modifiedChathead);
     return (
         <div className="chathead-container">
-            <img className="chathead-image" src="http://localhost:3000/chathead/Arvel.png"
+            <img className="chathead-image" src={`http://localhost:3000/chathead/${modifiedChathead}.png`}
                 alt="Chathead" />
         </div>
     )

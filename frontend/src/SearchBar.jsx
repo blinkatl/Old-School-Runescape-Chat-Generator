@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Searchbar.css"
 
-const SearchBar = () => {
+const SearchBar = ({ setChathead }) => {
   const [input, setInput] = useState('');
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const suggestions = [];
@@ -40,10 +40,11 @@ const SearchBar = () => {
   const handleSuggestionClick = (suggestion) => {
     setInput(suggestion);
     setFilteredSuggestions([]);
+    setChathead(suggestion);
   };
 
   return (
-    <div>
+    <div className="searchbar-container">
       <input
         type="text"
         value={input}
