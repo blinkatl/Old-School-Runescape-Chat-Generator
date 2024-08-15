@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Chathead from './Chathead'
 import Textbox from './Textbox';
-import SearchBar from './Searchbar';
+import SearchBar from './SearchBar';
+import TextInput from './TextInput';
 
 //npm run dev
 
 function App() {
   const [message, setMessage] = useState('');
+  const [dialogue, setDialogue] = useState('');
 
   useEffect(() => {
     // Fetch data from the backend
@@ -17,6 +19,10 @@ function App() {
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
+  const handleInputChange = (event) => {
+    setDialogue(event.target.value);
+  }
+
   return (
     <>
       <div className="App">
@@ -24,11 +30,12 @@ function App() {
           <div className="top-container">
             <div className="chatbox-container">
               <Chathead />
-              <Textbox />
+              <Textbox dialogue={dialogue}/>
             </div>
           </div>
           <div className="bottom-container">
             <SearchBar />
+            <TextInput dialogue={dialogue} handleInputChange={handleInputChange}/>
           </div>
         </div>
       </div>

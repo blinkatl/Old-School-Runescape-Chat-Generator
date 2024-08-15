@@ -1,9 +1,9 @@
 import "./Textbox.css"
 
-function Textbox() {
+function Textbox({dialogue}) {
     return(
         <div className="textbox-container">
-            <p>lvl 99 woodcut pls</p>
+            <p>{dialogue}</p>
         </div>
     )
 }

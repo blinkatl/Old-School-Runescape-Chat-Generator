@@ -20,7 +20,7 @@ const search = (req,res) => {
                 name: file,
                 path: `/chatheads/${file}`,
             });
-            if (results.length >= 10) break; // This stops the loop when 10 results are found
+            if (results.length >= 10) break;
         }
     }
 
