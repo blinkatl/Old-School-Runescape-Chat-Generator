@@ -1,3 +1,19 @@
-#dialogue {
-    height: 15px;
+.text-input-container {
+    width: 90%;
+    height: 250px;
 }
+
+.dialogue-text {
+    width: 100%;
+    height: 800px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #181a1b;
+    color: white;
+    resize: none;
+  }

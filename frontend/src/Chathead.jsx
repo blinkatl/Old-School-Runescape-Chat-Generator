@@ -15,8 +15,11 @@ function Chathead({ chathead }) {
     
     return (
         <div className="chathead-container">
-            <img className="chathead-image" src={`http://localhost:3000/chathead/${modifiedChathead}.png`}
-                alt="Chathead" />
+            <img
+                className="chathead-image"
+                src={`http://localhost:3000/chathead/${modifiedChathead}.png`}
+                alt="Chathead"
+            />
         </div>
     )
 }
