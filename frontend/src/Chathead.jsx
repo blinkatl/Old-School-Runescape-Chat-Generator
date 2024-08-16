@@ -12,7 +12,7 @@ function Chathead({ chathead }) {
     //         .catch(error => console.error('Error fetching chathead:', error));
     // }, []);
     const modifiedChathead = chathead.replace(/ /g, '_');
-    console.log(modifiedChathead);
+    
     return (
         <div className="chathead-container">
             <img className="chathead-image" src={`http://localhost:3000/chathead/${modifiedChathead}.png`}

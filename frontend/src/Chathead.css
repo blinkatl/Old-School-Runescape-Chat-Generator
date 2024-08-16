@@ -1,10 +1,13 @@
 .chathead-container {
     width: 20%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 img {
-  width: 75px;
-  height: 95px;
+  /* width: 75px;
+  height: 95px; */
+  width: 105px;
+  height: 125px;
 }

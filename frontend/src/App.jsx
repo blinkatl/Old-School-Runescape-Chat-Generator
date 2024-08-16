@@ -31,7 +31,7 @@ function App() {
           <div className="top-container">
             <div className="chatbox-container">
               <Chathead chathead={chathead}/>
-              <Textbox dialogue={dialogue}/>
+              <Textbox dialogue={dialogue} chathead={chathead}/>
             </div>
           </div>
           <div className="bottom-container">
