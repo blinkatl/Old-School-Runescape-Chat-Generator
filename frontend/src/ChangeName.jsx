@@ -1,3 +1,5 @@
+import './ChangeName.css'
+
 function ChangeName({chathead, newName, setNewName, isNameChanged, setIsNameChanged}) {
     const modifiedChathead = chathead.replace(/_/g, ' ');
 

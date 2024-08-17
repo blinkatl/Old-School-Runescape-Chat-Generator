@@ -1,13 +1,9 @@
-.text-input-container {
+.change-name-container {
     width: 90%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
 }
 
-.dialogue-text {
-    width: 100%;
-    flex-grow: 1;
+.change-name-container input[type="text"] {
+    width: 96%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -17,5 +13,4 @@
     transition: border-color 0.3s ease;
     background-color: #181a1b;
     color: white;
-    resize: none;
-  }
+}
