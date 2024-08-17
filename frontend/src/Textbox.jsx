@@ -1,13 +1,13 @@
 import "./Textbox.css"
 
-function Textbox({ dialogue, chathead, isChecked, newName, isNameChanged }) {
+function Textbox({ dialogue, chathead, isContinueChecked, newName, isNameChanged }) {
     const modifiedChathead = chathead.replace(/_/g, ' ');
 
     return(
         <div className="textbox-container">
             <p id="name">{isNameChanged ? newName : modifiedChathead}</p>
             <p id="dialogue">{dialogue}</p>
-            {isChecked ? (
+            {isContinueChecked ? (
                 <p id="continue">Click here to continue</p>
             ): (
                 <></>

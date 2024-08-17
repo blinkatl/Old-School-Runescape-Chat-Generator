@@ -6,6 +6,7 @@ import SearchBar from './SearchBar';
 import TextInput from './TextInput';
 import ShowContinue from './ShowContinue';
 import ChangeName from './ChangeName';
+import FlipChatbox from './FlipChatbox';
 
 //npm run dev
 
@@ -13,7 +14,8 @@ function App() {
   const [message, setMessage] = useState('');
   const [dialogue, setDialogue] = useState('');
   const [chathead, setChathead] = useState('Gnome_child');
-  const [isChecked, setIsChecked] = useState(true);
+  const [isContinueChecked, setIsContinueChecked] = useState(true);
+  const [isFlipChecked, setIsFlipChecked] = useState(false);
   const [newName, setNewName] = useState('');
   const [isNameChanged, setIsNameChanged] = useState(false);
 
@@ -35,7 +37,7 @@ function App() {
           <div className="top-container">
             <div className="chatbox-container">
               <Chathead chathead={chathead}/>
-              <Textbox dialogue={dialogue} chathead={chathead} isChecked={isChecked} newName={newName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
+              <Textbox dialogue={dialogue} chathead={chathead} isContinueChecked={isContinueChecked} newName={newName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
             </div>
           </div>
           <div className="bottom-container">
@@ -45,7 +47,8 @@ function App() {
             <div className="right-menu-container">
               <TextInput dialogue={dialogue} handleInputChange={handleInputChange}/>
               <ChangeName chathead={chathead} newName={newName} setNewName={setNewName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
-              <ShowContinue isChecked={isChecked} setIsChecked={setIsChecked}/>
+              <ShowContinue isContinueChecked={isContinueChecked} setIsContinueChecked={setIsContinueChecked}/>
+              <FlipChatbox isFlipChecked={isFlipChecked} setIsFlipChecked={setIsFlipChecked}/>
             </div>
           </div>
         </div>

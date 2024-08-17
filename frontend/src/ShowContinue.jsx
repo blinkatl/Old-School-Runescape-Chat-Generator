@@ -1,9 +1,9 @@
 import './ShowContinue.css'
 
-function ShowContinue({ isChecked, setIsChecked }) {
+function ShowContinue({ isContinueChecked, setIsContinueChecked }) {
     
     const handleCheckboxChange = (event) => {
-        setIsChecked(event.target.checked);
+        setIsContinueChecked(event.target.checked);
     };
 
     return (
@@ -11,9 +11,9 @@ function ShowContinue({ isChecked, setIsChecked }) {
             <label>
                 <input 
                     type="checkbox" 
-                    checked={isChecked} 
+                    checked={isContinueChecked} 
                     onChange={handleCheckboxChange} 
-                    className="continue-checkbox"
+                    className="checkbox"
                 />
             </label>
             <p>Show "Click here to continue"</p>
