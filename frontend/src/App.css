@@ -13,6 +13,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Bold12';
+  src: url(RuneScape-Bold-12.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .main-container {
   width: 948px;
   height: 888px;
