@@ -33,6 +33,13 @@ function App() {
   return (
     <>
       <div className="App">
+        <div className='left-sidebar-container'>
+          <div className='disclaimer-container'>
+            <p><em>This chat generator is a fan creation and is not affiliated with or endorsed by 
+              Jagex Ltd. All artwork is © Jagex Ltd. and is used under fair use for the purpose 
+              of parody and commentary.</em></p>
+          </div>
+        </div>
         <div className="main-container">
           <div className="top-container">
           <h1 id="title">Old School Runescape Chat Generator</h1>
