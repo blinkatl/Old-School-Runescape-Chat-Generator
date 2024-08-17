@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function ChangeName({chathead, newName, setNewName, isNameChanged, setIsNameChanged}) {
     const modifiedChathead = chathead.replace(/_/g, ' ');
 
@@ -12,6 +10,7 @@ function ChangeName({chathead, newName, setNewName, isNameChanged, setIsNameChan
 
     return (
         <div className="change-name-container">
+            <p className="input-header">Change name</p>
             <input
                 type="text"
                 value={isNameChanged ? newName : modifiedChathead}

@@ -18,7 +18,6 @@ function App() {
   const [isNameChanged, setIsNameChanged] = useState(false);
 
   useEffect(() => {
-    // Fetch data from the backend
     fetch('http://localhost:3000/')
       .then(response => response.json())
       .then(data => setMessage(data))
@@ -41,7 +40,7 @@ function App() {
           </div>
           <div className="bottom-container">
             <div className='left-menu-container'>
-              <SearchBar setChathead={setChathead}/>
+              <SearchBar setChathead={setChathead} setIsNameChanged={setIsNameChanged}/>
             </div>
             <div className="right-menu-container">
               <TextInput dialogue={dialogue} handleInputChange={handleInputChange}/>
