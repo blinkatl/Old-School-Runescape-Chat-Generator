@@ -4,6 +4,8 @@ import Chathead from './Chathead'
 import Textbox from './Textbox';
 import SearchBar from './SearchBar';
 import TextInput from './TextInput';
+import ShowContinue from './ShowContinue';
+import ChangeName from './ChangeName';
 
 //npm run dev
 
@@ -11,6 +13,9 @@ function App() {
   const [message, setMessage] = useState('');
   const [dialogue, setDialogue] = useState('');
   const [chathead, setChathead] = useState('Gnome_child');
+  const [isChecked, setIsChecked] = useState(true);
+  const [newName, setNewName] = useState('');
+  const [isNameChanged, setIsNameChanged] = useState(false);
 
   useEffect(() => {
     // Fetch data from the backend
@@ -31,12 +36,18 @@ function App() {
           <div className="top-container">
             <div className="chatbox-container">
               <Chathead chathead={chathead}/>
-              <Textbox dialogue={dialogue}/>
+              <Textbox dialogue={dialogue} chathead={chathead} isChecked={isChecked} newName={newName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
             </div>
           </div>
           <div className="bottom-container">
-            <SearchBar setChathead={setChathead}/>
-            <TextInput dialogue={dialogue} handleInputChange={handleInputChange}/>
+            <div className='left-menu-container'>
+              <SearchBar setChathead={setChathead}/>
+            </div>
+            <div className="right-menu-container">
+              <TextInput dialogue={dialogue} handleInputChange={handleInputChange}/>
+              <ChangeName chathead={chathead} newName={newName} setNewName={setNewName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
+              <ShowContinue isChecked={isChecked} setIsChecked={setIsChecked}/>
+            </div>
           </div>
         </div>
       </div>

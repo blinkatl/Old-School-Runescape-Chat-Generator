@@ -1,5 +1,5 @@
 .textbox-container {
-    width: 80%;
+    width: 79%;
     font-family: 'Quill8', sans-serif;
     font-size: 18px;
     color: black;
@@ -9,10 +9,19 @@
     text-align: center;
 }
 
+#name {
+    height: 33%;
+    color: #800000;
+}
+
 #continue {
+    height: 33%;
     color: #0303fd;
 }
 
-#name {
-    color: #800000;
+#dialogue {
+    height: 33%;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
 }

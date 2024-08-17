@@ -45,11 +45,12 @@ const SearchBar = ({ setChathead }) => {
 
   return (
     <div className="searchbar-container">
+      <p className="input-header">Chathead</p>
       <input
         type="text"
         value={input}
         onChange={handleInputChange}
-        placeholder="Enter NPC/Player/Pet..."
+        placeholder="Search NPC/Player/Pet..."
       />
       {filteredSuggestions.length > 0 && (
         <ul>
