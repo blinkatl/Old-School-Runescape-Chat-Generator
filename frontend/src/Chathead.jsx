@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
 import './Chathead.css'
 
-function Chathead({ chathead }) {
+function Chathead({ chathead, isFlipChecked }) {
     // useEffect(() => {
     //     fetch('http://localhost:3000/chathead/Arvel.png')
     //         .then(res => res.json())
@@ -16,7 +15,7 @@ function Chathead({ chathead }) {
     return (
         <div className="chathead-container">
             <img
-                className="chathead-image"
+                className={`chathead-image ${isFlipChecked ? 'flipped' : ''}`}
                 src={`http://localhost:3000/chathead/${modifiedChathead}.png`}
                 alt="Chathead"
             />

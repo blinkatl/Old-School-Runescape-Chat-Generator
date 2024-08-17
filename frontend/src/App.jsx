@@ -35,8 +35,8 @@ function App() {
       <div className="App">
         <div className="main-container">
           <div className="top-container">
-            <div className="chatbox-container">
-              <Chathead chathead={chathead}/>
+            <div className={`chatbox-container ${isFlipChecked ? 'flipped': ''}`}>
+              <Chathead chathead={chathead} isFlipChecked={isFlipChecked}/>
               <Textbox dialogue={dialogue} chathead={chathead} isContinueChecked={isContinueChecked} newName={newName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
             </div>
           </div>

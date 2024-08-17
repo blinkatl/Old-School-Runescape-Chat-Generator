@@ -1,4 +1,6 @@
 import './FlipChatbox.css'
+import './Chathead.css'
+import './App.css'
 
 function FlipChatbox({ isFlipChecked, setIsFlipChecked }) {
 

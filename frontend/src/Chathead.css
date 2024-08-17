@@ -11,3 +11,7 @@ img {
   width: 105px;
   height: 125px;
 }
+
+.chathead-image.flipped {
+  transform: scaleX(-1); /* Flips the image horizontally */
+}
