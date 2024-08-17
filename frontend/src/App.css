@@ -32,16 +32,16 @@
 
 .top-container {
   width: 100%;
-  height: 40%;
+  height: 36%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
 .chatbox-container {
   width: 707.25px; /*original: 943px*/
   height: 195px;/*original: 260px*/
-  margin-top: 100px;
   background-image: url('chatbox.png');
   background-size: cover;
   background-position: center;
@@ -55,7 +55,7 @@
 
 .bottom-container {
   width: 100%;
-  height: 60%;
+  height: 62%;
   display: flex;
   justify-content: center;
 }
@@ -80,4 +80,12 @@
   margin-bottom: 0px;
   color: black;
   font-weight: 800;
+}
+
+#title {
+  height: 33%;
+  font-family: 'Bold12', sans-serif;
+  font-size: 50px;
+  color: #ffff00;
+  margin: 0px;
 }

@@ -35,6 +35,7 @@ function App() {
       <div className="App">
         <div className="main-container">
           <div className="top-container">
+          <h1 id="title">Old School Runescape Chat Generator</h1>
             <div className={`chatbox-container ${isFlipChecked ? 'flipped': ''}`}>
               <Chathead chathead={chathead} isFlipChecked={isFlipChecked}/>
               <Textbox dialogue={dialogue} chathead={chathead} isContinueChecked={isContinueChecked} newName={newName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
