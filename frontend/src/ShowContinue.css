@@ -1,7 +1,10 @@
 .show-continue-container {
     width: 90%;
+    height: 15%;
     font-weight: 800;
     color: black;
+    display: flex;
+    align-items: center;
 }
 
 .continue-checkbox {
@@ -9,6 +12,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .continue-checkbox:checked {

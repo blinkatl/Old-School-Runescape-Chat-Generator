@@ -15,8 +15,8 @@ function ShowContinue({ isChecked, setIsChecked }) {
                     onChange={handleCheckboxChange} 
                     className="continue-checkbox"
                 />
-                Show "Click here to coninue"
             </label>
+            <p>Show "Click here to continue"</p>
         </div>
     )
 }
