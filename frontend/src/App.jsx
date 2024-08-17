@@ -8,6 +8,7 @@ import ShowContinue from './ShowContinue';
 import ChangeName from './ChangeName';
 import FlipChatbox from './FlipChatbox';
 import KofiButton from './KofiButton';
+import GithubButton from './GithubButton'
 //npm run dev
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <div className="App">
         <div className='left-sidebar-container'>
           <KofiButton />
+          <GithubButton />
           <div className='disclaimer-container'>
             <p><em>This chat generator is a fan creation and is not affiliated with or endorsed by 
               Jagex Ltd. All artwork is © Jagex Ltd. and is used under fair use for the purpose 

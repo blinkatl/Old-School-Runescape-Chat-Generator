@@ -1,6 +1,6 @@
-.kofi-button {
+.github-button {
     width: 210px;
-    background-color: #29ABE0;
+    background-color: #24292e;
     color: white;
     padding: 8px 20px;
     border: none;
@@ -15,16 +15,16 @@
     transition: background-color 0.3s ease;
 }
 
-.kofi-button:hover {
-    background-color: #238bb0;
+.github-button:hover {
+    background-color: #2b3137;
 }
   
-.kofi-button:focus {
+.github-button:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 94, 91, 0.4);
 }
 
-.kofi-logo {
+.github-logo {
     width: 24px;
     height: 24px;
     margin-bottom: 1px;
