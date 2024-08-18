@@ -13,7 +13,7 @@
 }
   
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover {
     background-color: #99c8ff;
 }
 
@@ -30,6 +30,7 @@
     display: none;
     position: absolute;
     background-color: #181a1b;
+    border-radius: 4px;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -48,26 +49,17 @@
 .dropdown-content a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {display:flex;}
 
-.adjust-size {
+.adjust-size, .adjust-position {
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
 }
 
 p {
   margin: 0px;
-}
-
-.adjust-position {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
 }
