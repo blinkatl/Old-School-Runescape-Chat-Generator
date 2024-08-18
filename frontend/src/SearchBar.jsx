@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Searchbar.css"
 
-const SearchBar = ({ setChathead, setIsNameChanged }) => {
+const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
   const [input, setInput] = useState('');
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const suggestions = [];
@@ -42,7 +42,7 @@ const SearchBar = ({ setChathead, setIsNameChanged }) => {
     setFilteredSuggestions([]);
     setChathead(suggestion);
     setIsNameChanged(false);
-    //here
+    setIsUploaded(false);
   };
 
   return (

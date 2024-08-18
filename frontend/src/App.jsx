@@ -55,7 +55,7 @@ function App() {
           </div>
           <div className="bottom-container">
             <div className='left-menu-container'>
-              <SearchBar setChathead={setChathead} setIsNameChanged={setIsNameChanged}/>
+              <SearchBar setChathead={setChathead} setIsNameChanged={setIsNameChanged} setIsUploaded={setIsUploaded}/>
             </div>
             <div className="right-menu-container">
               <TextInput dialogue={dialogue} setDialogue={setDialogue}/>
