@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './TextInput.css'
 
 function TextInput({dialogue, setDialogue}) {
