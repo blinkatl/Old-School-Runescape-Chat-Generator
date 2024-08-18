@@ -58,3 +58,14 @@
     background-color: #99c8ff;
     color: black;
   }
+
+  #suggestion-chathead {
+    width: 30px;
+    height: 40px;
+  }
+
+  .suggestion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

@@ -18,6 +18,7 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
                 return {
                     ...item,
                     name: `${modifiedName}`,
+                    unmodifiedName: item.name,
                 };
             });
             setFilteredSuggestions(modifiedData);
@@ -58,10 +59,15 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
         <ul>
           {filteredSuggestions.map((suggestion, index) => (
             <li
+              className="suggestion-item"
               key={index}
               onClick={() => handleSuggestionClick(suggestion.name)}
             >
               {suggestion.name}
+              <img
+                id="suggestion-chathead"
+                src={`http://localhost:3000/chathead/${suggestion.unmodifiedName}`}
+              />
             </li>
           ))}
         </ul>
