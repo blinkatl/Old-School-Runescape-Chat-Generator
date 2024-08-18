@@ -33,10 +33,6 @@ function App() {
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
-  const handleInputChange = (event) => {
-    setDialogue(event.target.value);
-  }
-
   return (
     <>
       <div className="App">
@@ -63,7 +59,7 @@ function App() {
               <SearchBar setChathead={setChathead} setIsNameChanged={setIsNameChanged}/>
             </div>
             <div className="right-menu-container">
-              <TextInput dialogue={dialogue} handleInputChange={handleInputChange}/>
+              <TextInput dialogue={dialogue} setDialogue={setDialogue}/>
               <ChangeName chathead={chathead} newName={newName} setNewName={setNewName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
               <ShowContinue isContinueChecked={isContinueChecked} setIsContinueChecked={setIsContinueChecked}/>
               <FlipChatbox isFlipChecked={isFlipChecked} setIsFlipChecked={setIsFlipChecked}/>
