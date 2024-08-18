@@ -10,16 +10,19 @@ import FlipChatbox from './FlipChatbox';
 import KofiButton from './KofiButton';
 import GithubButton from './GithubButton'
 import DownloadButton from './DownloadButton';
+import UploadButton from './UploadButton';
 //npm run dev
 
 function App() {
   const [message, setMessage] = useState('');
-  const [dialogue, setDialogue] = useState('');
+  const [dialogue, setDialogue] = useState('lvl 99 woodcut pls');
   const [chathead, setChathead] = useState('Gnome_child');
   const [isContinueChecked, setIsContinueChecked] = useState(true);
   const [isFlipChecked, setIsFlipChecked] = useState(false);
   const [newName, setNewName] = useState('');
   const [isNameChanged, setIsNameChanged] = useState(false);
+  const [image, setImage] = useState();
+  const [isUploaded, setIsUploaded] = useState(false);
   const captureRef = useRef(null);
 
   useEffect(() => {
@@ -49,7 +52,7 @@ function App() {
           <div className="top-container">
           <h1 id="title">Old School Runescape Chat Generator</h1>
             <div className={`chatbox-container ${isFlipChecked ? 'flipped': ''}`} ref={captureRef} >
-              <Chathead chathead={chathead} isFlipChecked={isFlipChecked}/>
+              <Chathead chathead={chathead} isFlipChecked={isFlipChecked} image={image} isUploaded={isUploaded}/>
               <Textbox dialogue={dialogue} chathead={chathead} isContinueChecked={isContinueChecked} newName={newName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged} />
             </div>
           </div>
@@ -63,6 +66,7 @@ function App() {
               <ShowContinue isContinueChecked={isContinueChecked} setIsContinueChecked={setIsContinueChecked}/>
               <FlipChatbox isFlipChecked={isFlipChecked} setIsFlipChecked={setIsFlipChecked}/>
               <div className='right-menu-bottom-container'>
+                <UploadButton setImage={setImage} setIsUploaded={setIsUploaded}/>
                 <DownloadButton captureRef={captureRef} fileName="chatbox.png"/>
               </div>
             </div>
