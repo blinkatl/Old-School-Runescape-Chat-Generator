@@ -12,6 +12,7 @@ import GithubButton from './GithubButton'
 import DownloadButton from './DownloadButton';
 import UploadButton from './UploadButton';
 import DiscordButton from './DiscordButton';
+import AdjustImage from './AdjustImage';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -62,7 +63,8 @@ function App() {
               <ChangeName chathead={chathead} newName={newName} setNewName={setNewName} isNameChanged={isNameChanged} setIsNameChanged={setIsNameChanged}/>
               <ShowContinue isContinueChecked={isContinueChecked} setIsContinueChecked={setIsContinueChecked}/>
               <FlipChatbox isFlipChecked={isFlipChecked} setIsFlipChecked={setIsFlipChecked}/>
-              <div className='right-menu-bottom-container'>
+              <div className='right-menu-button-container'>
+                <AdjustImage />
                 <UploadButton setImage={setImage} setIsUploaded={setIsUploaded}/>
                 <DownloadButton captureRef={captureRef} fileName="chatbox.png"/>
               </div>

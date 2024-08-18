@@ -5,13 +5,14 @@
     align-items: center;
 }
 
-img {
-  /* width: 75px;
-  height: 95px; */
-  width: 105px;
-  height: 125px;
+.chathead-image {
+  width: var(--img-width, 105px);
+  height: var(--img-height, 125px);
+  position: relative;
+  left: var(--img-x, 0px);
+  top: var(--img-y, 0px);
 }
 
 .chathead-image.flipped {
-  transform: scaleX(-1); /* Flips the image horizontally */
+  transform: scaleX(-1);
 }

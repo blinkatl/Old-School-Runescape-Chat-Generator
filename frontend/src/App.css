@@ -119,9 +119,10 @@
   margin: 0px;
 }
 
-.right-menu-bottom-container {
+.right-menu-button-container {
   width: 100%;
-  height: 20%;
+  height: 7%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 7px;
 }
