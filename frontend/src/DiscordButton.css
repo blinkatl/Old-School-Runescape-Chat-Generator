@@ -1,0 +1,37 @@
+.discord-button {
+    width: 210px;
+    background-color: #5865f2;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.discord-button:hover {
+    background-color: #5f6bf1;
+}
+  
+.discord-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 94, 91, 0.4);
+}
+
+.discord-logo {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 1px;
+    margin-right: 4px;
+}
+
+a {
+    text-decoration: none;
+  }
+  

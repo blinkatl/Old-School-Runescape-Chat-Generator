@@ -11,6 +11,7 @@ import KofiButton from './KofiButton';
 import GithubButton from './GithubButton'
 import DownloadButton from './DownloadButton';
 import UploadButton from './UploadButton';
+import DiscordButton from './DiscordButton';
 //npm run dev
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
     <>
       <div className="App">
         <div className='left-sidebar-container'>
+          <DiscordButton />
           <KofiButton />
           <GithubButton />
           <div className='disclaimer-container'>

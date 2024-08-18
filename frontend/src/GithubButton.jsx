@@ -4,7 +4,7 @@ function GithubButton() {
     return (
         <a href="https://github.com/blinkatl/Old-School-Runescape-Chat-Generator" target="_blank" rel="noopener noreferrer">
             <button className="github-button">
-                <img src="./public/githubLogo.svg" alt="Github Logo" className="github-logo" />
+                <img src="/githubLogo.svg" alt="Github Logo" className="github-logo" />
                 © blinkatl, 2024
             </button>
         </a>
