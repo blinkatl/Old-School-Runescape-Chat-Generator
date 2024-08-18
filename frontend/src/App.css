@@ -36,7 +36,14 @@
 
 @font-face {
   font-family: 'Bold12';
-  src: url(RuneScape-Bold-12.ttf) format('truetype');
+  src: url('RuneScape-Bold-12.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plain11';
+  src: url('Runescape-Plain-11.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -79,6 +86,7 @@
   height: 62%;
   display: flex;
   justify-content: center;
+  font-family: 'Plain11', sans-serif;
 }
 
 .left-menu-container {

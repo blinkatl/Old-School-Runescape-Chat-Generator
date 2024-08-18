@@ -1,71 +1,64 @@
-/* Container for the search bar and suggestions */
 .searchbar-container {
     width: 100%;
     
   }
-  
-  /* Input styling */
-  .searchbar-container input[type="text"] {
-    width: 96%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    outline: none;
-    transition: border-color 0.3s ease;
-    background-color: #181a1b;
-    color: white;
-  }
-  
-  /* Input focus state */
-  .searchbar-container input[type="text"]:focus {
-    border-color: #007bff;
-  }
-  
-  /* Dropdown list styling */
-  .searchbar-container ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    max-height: 400px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    border-top: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    background-color: #fff;
-    z-index: 1000;
-    border-radius: 0 0 4px 4px;
-  }
-  
-  /* Dropdown list item styling */
-  .searchbar-container ul li {
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    background-color: #181a1b;
-  }
-  
-  /* Dropdown list item hover state */
-  .searchbar-container ul li:hover {
-    background-color: #99c8ff;
-    color: black;
-  }
-  
-  /* Dropdown list item active state */
-  .searchbar-container ul li:active {
-    background-color: #99c8ff;
-    color: black;
-  }
 
-  #suggestion-chathead {
-    width: 30px;
-    height: 40px;
-  }
+.searchbar-container input[type="text"] {
+  width: 96%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #181a1b;
+  color: white;
+}
 
-  .suggestion-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.searchbar-container input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.searchbar-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  border-radius: 0 0 4px 4px;
+}
+
+.searchbar-container ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: #181a1b;
+}
+
+.searchbar-container ul li:hover {
+  background-color: #99c8ff;
+  color: black;
+}
+
+.searchbar-container ul li:active {
+  background-color: #99c8ff;
+  color: black;
+}
+
+#suggestion-chathead {
+  width: 30px;
+  height: 40px;
+}
+
+.suggestion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
