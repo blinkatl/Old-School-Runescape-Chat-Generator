@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');  // or use 'firefox' or 'webkit' as needed
 
 const generate = async (req, res) => {
-    const { chathead, dialogue, name } = req.body;
+    const { chathead, dialogue, name, removePrompt } = req.body;
 
     try {
         const browser = await chromium.launch({ headless: false }); // headless:false for debug
@@ -13,7 +13,7 @@ const generate = async (req, res) => {
         await page.goto('http://localhost:5173')
         await page.waitForLoadState('networkidle');
 
-        await page.evaluate(({ dialogue, chathead, name }) => {
+        await page.evaluate(({ dialogue, chathead, name, removePrompt }) => {
             // Change chathead image src
             const chatheadImage = document.querySelector('.chathead-image');
             if (chatheadImage) {
@@ -29,12 +29,15 @@ const generate = async (req, res) => {
             // Change name text
             const nameDiv = document.querySelector('#name');
             if (nameDiv) {
-                if (!name) {
-                    name = chathead;
-                }
-                nameDiv.textContent = name;
+                nameDiv.textContent = name ? name : chathead;
             }
-        }, { dialogue, chathead, name });
+
+            // Remove Click here to continue prompt
+            const continueDiv = document.querySelector('#continue');
+            if (continueDiv && removePrompt) {
+                continueDiv.textContent = '';
+            }
+        }, { dialogue, chathead, name, removePrompt });
 
         //await page.pause()//DEBUG CODE
         const memeBuffer = await page.locator('.chatbox-container').screenshot({ type: 'png' });
