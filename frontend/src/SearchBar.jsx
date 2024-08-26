@@ -66,7 +66,7 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
               {suggestion.name}
               <img
                 id="suggestion-chathead"
-                src={`http://localhost:3000/chathead/${suggestion.unmodifiedName}`}
+                src={`http://localhost:3000/chathead/${encodeURIComponent(suggestion.unmodifiedName)}`}
               />
             </li>
           ))}

@@ -17,7 +17,7 @@ const generate = async (req, res) => {
             // Change chathead image src
             const chatheadImage = document.querySelector('.chathead-image');
             if (chatheadImage) {
-                chatheadImage.src = `http://localhost:3000/chathead/${chathead}.png`;
+                chatheadImage.src = `http://localhost:3000/chathead/${encodeURIComponent(chathead)}.png`;
             }
         
             // Change dialogue text
