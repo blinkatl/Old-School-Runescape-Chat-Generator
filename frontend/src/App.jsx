@@ -37,13 +37,18 @@ function App() {
     <>
       <div className="App">
         <div className='left-sidebar-container'>
-          <DiscordButton />
-          <KofiButton />
-          <GithubButton />
-          <div className='disclaimer-container'>
-            <p><em>This chat generator is a fan creation and is not affiliated with or endorsed by 
-              Jagex Ltd. All artwork is © Jagex Ltd. and is used under fair use for the purpose 
-              of parody and commentary.</em></p>
+          <div className='top-sidebar-container'>
+            <DiscordButton />
+            <img id='preview-gif' src='/preview.gif' alt='preview gif'/>
+          </div>
+          <div className='bottom-sidebar-container'>
+            <KofiButton />
+            <GithubButton />
+            <div className='disclaimer-container'>
+              <p><em>This chat generator is a fan creation and is not affiliated with or endorsed by 
+                Jagex Ltd. All artwork is © Jagex Ltd. and is used under fair use for the purpose 
+                of parody and commentary.</em></p>
+            </div>
           </div>
         </div>
         <div className="main-container">

@@ -87,8 +87,8 @@ function AdjustImage() {
                     <div className="slidecontainer">
                         <input 
                             type="range" 
-                            min="-50" 
-                            max="50" 
+                            min="-100" 
+                            max="100" 
                             value={x} 
                             className="slider" 
                             id="x" 
@@ -99,8 +99,8 @@ function AdjustImage() {
                     <div className="slidecontainer">
                         <input 
                             type="range" 
-                            min="-50" 
-                            max="50" 
+                            min="-100" 
+                            max="100" 
                             value={y} 
                             className="slider" 
                             id="y" 
