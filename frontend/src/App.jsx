@@ -45,6 +45,7 @@ function App() {
             <KofiButton />
             <GithubButton />
             <div className='disclaimer-container'>
+              <p>For feature requests, bug reports, or any other inquiries, <a href='https://discord.gg/eFrGshRey3'>contact me on Discord</a></p>
               <p><em>This chat generator is a fan creation and is not affiliated with or endorsed by 
                 Jagex Ltd. All artwork is © Jagex Ltd. and is used under fair use for the purpose 
                 of parody and commentary.</em></p>
