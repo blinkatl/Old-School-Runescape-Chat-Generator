@@ -1,55 +1,52 @@
-const { chromium } = require('playwright');  // or use 'firefox' or 'webkit' as needed
+const { chromium } = require('playwright');  // Or use 'firefox' or 'webkit' as needed
 
+// Endpoint for discord bot. Discord inputs change chatbox's div and returns div as screenshot
 const generate = async (req, res) => {
     const { chathead, dialogue, name, removePrompt } = req.body;
 
     try {
-        const browser = await chromium.launch({ headless: false }); // headless:false for debug
+        const browser = await chromium.launch(); // DEBUG: Add { headless:false }
         const page = await browser.newPage();
 
-        // Capture console messages from the browser context for debugging
-        page.on('console', msg => console.log('BROWSER LOG:', msg.text()));
+        // DEBUG: Capture console messages from the browser context for debugging
+        // page.on('console', msg => console.log('BROWSER LOG:', msg.text()));
 
         await page.goto('http://localhost:5173')
         await page.waitForLoadState('networkidle');
 
         await page.evaluate(({ dialogue, chathead, name, removePrompt }) => {
-            // Change chathead image src
             const chatheadImage = document.querySelector('.chathead-image');
             if (chatheadImage) {
                 chatheadImage.src = `http://localhost:3000/chathead/${encodeURIComponent(chathead)}.png`;
             }
         
-            // Change dialogue text
             const dialogueDiv = document.querySelector('#dialogue');
             if (dialogueDiv) {
                 dialogueDiv.textContent = dialogue;
             }
 
-            // Change name text
             const nameDiv = document.querySelector('#name');
             if (nameDiv) {
                 nameDiv.textContent = name ? name : chathead;
             }
 
-            // Remove Click here to continue prompt
             const continueDiv = document.querySelector('#continue');
             if (continueDiv && removePrompt) {
                 continueDiv.textContent = '';
             }
         }, { dialogue, chathead, name, removePrompt });
 
-        //await page.pause()//DEBUG CODE
-        const memeBuffer = await page.locator('.chatbox-container').screenshot({ type: 'png' });
+        //await page.pause() // DEBUG
+        const buffer = await page.locator('.chatbox-container').screenshot({ type: 'png' });
         await browser.close();
 
         res.setHeader('Content-Type', 'image/png');
-        res.send(memeBuffer);
+        res.send(buffer);
 
         // If I want to save or process the image
-        // const memeUrl = `/path/to/save/generated-meme.png`;
-        // require('fs').writeFileSync(memeUrl, memeBuffer);
-        // res.json({ url: memeUrl });
+        // const url = `/path/to/save/generated.png`;
+        // require('fs').writeFileSync(url, buffer);
+        // res.json({ url: url });
     } catch (error) {
         console.error('Error creating post:', error);
         res.status(500).json({ error: 'An error occurred while creating the post.' });
