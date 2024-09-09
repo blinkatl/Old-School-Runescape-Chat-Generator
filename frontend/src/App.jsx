@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { useEffect, useState, useRef } from 'react'
 import './App.css'
 import Chathead from './Chathead'
@@ -78,6 +79,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </>
   );
 }
