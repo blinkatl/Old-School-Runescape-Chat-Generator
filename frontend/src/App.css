@@ -28,21 +28,21 @@
 
 @font-face {
   font-family: 'Quill8';
-  src:url('RuneScape-Quill-8.ttf') format('truetype');
+  src:url('/RuneScape-Quill-8.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bold12';
-  src: url('RuneScape-Bold-12.ttf') format('truetype');
+  src: url('/RuneScape-Bold-12.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Plain11';
-  src: url('RuneScape-Plain-11.ttf') format('truetype');
+  src: url('/RuneScape-Plain-11.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -50,7 +50,7 @@
 .main-container {
   width: 948px;
   height: 888px;
-  background-image: url('clue_scroll_torn.png');
+  background-image: url('/clue_scroll_torn.png');
   background-size: cover;
   background-position: center;
   display: flex;
