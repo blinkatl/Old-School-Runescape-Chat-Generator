@@ -69,7 +69,7 @@
 .chatbox-container {
   width: 707.25px; /*original: 943px*/
   height: 195px;/*original: 260px*/
-  background-image: url('chatbox.png');
+  background-image: url('/chatbox.png');
   background-size: cover;
   background-position: center;
   display: flex;
