@@ -17,7 +17,7 @@ const generate = async (req, res) => {
         await page.evaluate(({ dialogue, chathead, name, removePrompt }) => {
             const chatheadImage = document.querySelector('.chathead-image');
             if (chatheadImage) {
-                chatheadImage.src = `http://localhost:3000/chathead/${encodeURIComponent(chathead)}.png`;
+                chatheadImage.src = `http://osrs-chat-generator.adaptable.app/chathead/${encodeURIComponent(chathead)}.png`;
             }
         
             const dialogueDiv = document.querySelector('#dialogue');
