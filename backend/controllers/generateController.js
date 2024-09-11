@@ -11,7 +11,7 @@ const generate = async (req, res) => {
         // DEBUG: Capture console messages from the browser context for debugging
         // page.on('console', msg => console.log('BROWSER LOG:', msg.text()));
 
-        await page.goto('http://localhost:5173')
+        await page.goto('https://old-school-runescape-chat-generator.vercel.app/')
         await page.waitForLoadState('networkidle');
 
         await page.evaluate(({ dialogue, chathead, name, removePrompt }) => {
