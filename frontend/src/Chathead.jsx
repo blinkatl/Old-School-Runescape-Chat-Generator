@@ -7,7 +7,7 @@ function Chathead({ chathead, isFlipChecked, image, isUploaded }) {
         <div className="chathead-container">
             <img
                 className={`chathead-image ${isFlipChecked ? 'flipped' : ''}`}
-                src={isUploaded ? image : `http://osrs-chat-generator.adaptable.app/${encodeURIComponent(modifiedChathead)}.png`}
+                src={isUploaded ? image : `http://osrs-chat-generator.adaptable.app/chathead/${encodeURIComponentmodifiedChathead}.png`}
                 alt="Chathead"
             />
         </div>

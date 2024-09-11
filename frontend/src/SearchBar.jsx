@@ -9,7 +9,7 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
   useEffect(() => {
     const modifiedInput = input.toLowerCase().replace(/ /g, '_');
 
-    fetch(`http://localhost:3000/chathead/search?q=${encodeURIComponent(modifiedInput)}`)
+    fetch(`http://osrs-chat-generator.adaptable.app/chathead/search?q=${encodeURIComponent(modifiedInput)}`)
         .then(res => res.json())
         .then(data => {
             const modifiedData = data.map(item => {
@@ -66,7 +66,7 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
               {suggestion.name}
               <img
                 id="suggestion-chathead"
-                src={`http://osrs-chat-generator.adaptable.app/${encodeURIComponent(suggestion.unmodifiedName)}`}
+                src={`http://osrs-chat-generator.adaptable.app/chathead/${encodeURIComponent(suggestion.unmodifiedName)}`}
               />
             </li>
           ))}
