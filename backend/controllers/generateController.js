@@ -49,7 +49,7 @@ const generate = async (req, res) => {
         // res.json({ url: url });
     } catch (error) {
         console.error('Error creating post:', error);
-        res.status(500).json({ error: 'An error occurred while creating the post.' });
+        res.status(500).json({ error: 'An error occurred while creating the post.', details: error.message });
     }
 };
 
