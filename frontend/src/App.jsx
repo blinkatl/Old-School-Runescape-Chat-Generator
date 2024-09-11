@@ -28,7 +28,7 @@ function App() {
   const captureRef = useRef(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/')
+    fetch('https://osrs-chat-generator.adaptable.app/')
       .then(response => response.json())
       .then(data => setMessage(data))
       .catch(error => console.error('Error fetching data:', error));

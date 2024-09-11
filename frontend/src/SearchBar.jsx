@@ -66,7 +66,7 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
               {suggestion.name}
               <img
                 id="suggestion-chathead"
-                src={`http://localhost:3000/chathead/${encodeURIComponent(suggestion.unmodifiedName)}`}
+                src={`https://osrs-chat-generator.adaptable.app/chathead/${encodeURIComponent(suggestion.unmodifiedName)}`}
               />
             </li>
           ))}
