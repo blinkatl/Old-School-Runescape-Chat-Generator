@@ -5,7 +5,7 @@ const generate = async (req, res) => {
     const { chathead, dialogue, name, removePrompt } = req.body;
 
     try {
-        const browser = await chromium.launch(); // DEBUG: Add { headless:false }
+        const browser = await chromium.launch({ headless: true }); // DEBUG: Add { headless:false }
         const page = await browser.newPage();
 
         // DEBUG: Capture console messages from the browser context for debugging
