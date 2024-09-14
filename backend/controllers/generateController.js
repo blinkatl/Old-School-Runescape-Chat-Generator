@@ -1,4 +1,4 @@
-const { chromium } = require('playwright'); 
+const { chromium } = require('playwright');
 
 const generate = async (req, res) => {
     const { chathead, dialogue, name, removePrompt } = req.body;
