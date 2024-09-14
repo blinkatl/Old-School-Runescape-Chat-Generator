@@ -3,7 +3,7 @@
 
 ![frontendPreview](https://github.com/user-attachments/assets/15361b45-85f7-4635-ba06-fbd184bcc86d)
 
-[Add me on Discord!](https://discord.com/oauth2/authorize?client_id=1274865747981766668)
+[Add me as a Discord bot!](https://discord.com/oauth2/authorize?client_id=1274865747981766668)
 
 ## About
 Create a custom Old School Runescape chatbox with any text you want and any of the 6000+ NPC chatheads in the game.
