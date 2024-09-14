@@ -1,4 +1,6 @@
 # Old-School-Runescape-Chat-Generator
+[Link to site](https://old-school-runescape-chat-generator.vercel.app/)
+
 ![frontendPreview](https://github.com/user-attachments/assets/15361b45-85f7-4635-ba06-fbd184bcc86d)
 
 [Add me on Discord!](https://discord.com/oauth2/authorize?client_id=1274865747981766668)
