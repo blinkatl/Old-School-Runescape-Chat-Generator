@@ -22,3 +22,5 @@ blinkatl retains the rights to the code in this repository. The artwork is owned
 
 - Old School Runescape is a trademark of Jagex.
 - Special thanks to the OSRS community for inspiration.
+- Frontend hosted on Vercel
+- Backend hosted on Adaptable.io
