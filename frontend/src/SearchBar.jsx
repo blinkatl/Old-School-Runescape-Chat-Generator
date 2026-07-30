@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE_URL } from "./config";
 import "./Searchbar.css"
 
 const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
@@ -9,7 +10,7 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
   useEffect(() => {
     const modifiedInput = input.toLowerCase().replace(/ /g, '_');
 
-    fetch(`https://osrs-chat-generator.adaptable.app/chathead/search?q=${encodeURIComponent(modifiedInput)}`)
+    fetch(`${API_BASE_URL}/chathead/search?q=${encodeURIComponent(modifiedInput)}`)
         .then(res => res.json())
         .then(data => {
             const modifiedData = data.map(item => {
@@ -66,7 +67,7 @@ const SearchBar = ({ setChathead, setIsNameChanged, setIsUploaded }) => {
               {suggestion.name}
               <img
                 id="suggestion-chathead"
-                src={`https://osrs-chat-generator.adaptable.app/chathead/${encodeURIComponent(suggestion.unmodifiedName)}`}
+                src={`${API_BASE_URL}/chathead/${encodeURIComponent(suggestion.unmodifiedName)}`}
               />
             </li>
           ))}

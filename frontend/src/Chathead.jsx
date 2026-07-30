@@ -1,4 +1,5 @@
 import './Chathead.css'
+import { API_BASE_URL } from "./config";
 
 function Chathead({ chathead, isFlipChecked, image, isUploaded }) {
     const modifiedChathead = chathead.replace(/ /g, '_');
@@ -7,7 +8,7 @@ function Chathead({ chathead, isFlipChecked, image, isUploaded }) {
         <div className="chathead-container">
             <img
                 className={`chathead-image ${isFlipChecked ? 'flipped' : ''}`}
-                src={isUploaded ? image : `https://osrs-chat-generator.adaptable.app/chathead/${encodeURIComponent(modifiedChathead)}.png`}
+                src={isUploaded ? image : `${API_BASE_URL}/${encodeURIComponent(modifiedChathead)}.png`}
                 alt="Chathead"
             />
         </div>
